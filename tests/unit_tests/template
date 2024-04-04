@@ -1,0 +1,13 @@
+#include "maze.h"
+#include "test_utils.hpp"
+#include <ctime>
+#include <stdlib.h>
+
+int main(const int argc, const char **argv) {
+  return test_wrapper(argc, argv, []() {
+    time_t seed;
+    srand(time(&seed));
+
+    return true;
+  });
+}
