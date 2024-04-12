@@ -28,12 +28,8 @@ void print_matrix(const string *matrix, int rows) {
 }
 
 void delete_matrix(string *&matrix) {
-  int i = 0;
-  while (matrix[i] != "") {
-    delete &matrix[i];
-    i++;
-  }
   delete[] matrix;
+  matrix = nullptr;
 }
 
 void find_start(string *matrix, int rows, int &row, int &col) {
